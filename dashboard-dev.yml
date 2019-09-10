@@ -28,69 +28,11 @@ eureka:
 
 keycloak:
   auth-server-url: http://${host.keycloak}:8080/auth
-  enable-basic-auth: false
   realm: master
-  public-client: false
-  resource: login-app
-  ssl-required: external
+  resource: local-open
+  ssl-required: none
   confidential-port: 0
   use-resource-role-mappings: true
-  cors: true
-  corsMaxAge: 3600
-  corsAllowedHeaders: '*, Origin, X-Requested-With, Content-Type, Accept, Authorization, refreshtoken'
-  corsAllowedMethods: 'POST, PUT, DELETE, GET'
   credentials:
     secret: d06f5faa-ca68-46a6-8bb2-5a2cd5584270
   principal-attribute: preferred_username
-  config:
-    file: file:///E:/fishcare/keycloak.json
-    url:
-      logout: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/logout
-      userinfo: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/userinfo
-    auth:
-      username: admin
-      password: admin1234
-  bearer-only: true
-  security-constraints:
-    - authRoles:
-        - user
-        - admin
-        - contributor
-      securityCollections:
-        - patterns:
-            - /api/dashboard/*
-            - /api/user/update
-            - /api/user/profile
-            - /api/filter/*
-            - /api/widget/*
-            - /api/object/lock
-            - /api/object/unlock
-            - /api/logout
-            - /api/isadmin/*
-            - /api/user/current
-            - /api/user/current/profile
-            - /api/user/listByRoleAdmin
-            - /api/group/search
-            - /api/group/search
-            - /api/groups/*/users
-            - /api/groups/*/exist
-            - /api/user/listByIds
-            - /api/user/search
-            - /api/user/check/*
-            - /api/users/*
-            - /api/projects/*
-    - authRoles:
-        - admin
-      securityCollections:
-        - patterns:
-            - /api/user/*
-            - /api/admin/*
-    - authRoles:
-        - contributor
-        - admin
-      securityCollections:
-        - patterns:
-            - /api/user/list
-            - /api/user/listByIds
-            - /api/user/search
-            - /api/user/check/*
