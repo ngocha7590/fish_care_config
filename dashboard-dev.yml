@@ -7,8 +7,6 @@ server:
   port: 9602
 
 spring:
-  main:
-    allow-bean-definition-overriding: true
   datasource:
     url: 'jdbc:mysql://${host.mysql}:3306/fishcare?useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true'
     username: root
