@@ -9,29 +9,4 @@ server:
 spring:
   main:
     allow-bean-definition-overriding: true
-  datasource:
-    url: 'jdbc:mysql://${host.mysql}:3306/fishcare?useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true'
-    username: root
-    password: 123456789
-  jpa:
-    hibernate:
-      ddl-auto: update
-  application:
-    name: dashboard
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://${host.eureka}:9601/eureka/
-  instance:
-    preferIpAddress: true
-
-keycloak:
-  auth-server-url: http://${host.keycloak}:8080/auth
-  realm: master
-  resource: local-open
-  ssl-required: none
-  confidential-port: 0
-  use-resource-role-mappings: true
-  credentials:
-    secret: d06f5faa-ca68-46a6-8bb2-5a2cd5584270
-  principal-attribute: preferred_username
+  
