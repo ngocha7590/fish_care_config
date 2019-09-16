@@ -9,4 +9,10 @@ server:
 spring:
   main:
     allow-bean-definition-overriding: true
-  
+  datasource:
+    url: 'jdbc:mysql://${host.mysql}:3306/akawork_dashboard?useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true'
+    username: root
+    password: 123456789
+  jpa:
+    hibernate:
+      ddl-auto: update
