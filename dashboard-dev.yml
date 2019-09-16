@@ -16,7 +16,8 @@ spring:
       ddl-auto: update
   application:
     name: dashboard
-
+  main:
+    allow-bean-definition-overriding: true
 eureka:
   client:
     serviceUrl:
