@@ -24,4 +24,4 @@ eureka:
     preferIpAddress: true
 keycloak:
   config:
-    file: keycloak.json
+    file: /opt/fishcare/local/keycloak.json
