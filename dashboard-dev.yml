@@ -22,3 +22,6 @@ eureka:
       defaultZone: http://${host.eureka}:9601/eureka/
   instance:
     preferIpAddress: true
+keycloak:
+  config:
+    file: keycloak.json
