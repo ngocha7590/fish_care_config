@@ -23,7 +23,7 @@ eureka:
   instance:
     preferIpAddress: true
 keycloak:
-  auth-server-url: http://${host.keycloak}:9090/auth
+  auth-server-url: http://${host.keycloak}:8080/auth
   enable-basic-auth: false
   realm: master
   public-client: false
