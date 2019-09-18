@@ -37,3 +37,8 @@ keycloak:
   corsAllowedMethods: 'POST, PUT, DELETE, GET'
   credentials:
     secret: d06f5faa-ca68-46a6-8bb2-5a2cd5584270
+  security-constraints:
+    - authRoles:
+      - admin
+     securityCollections:
+      - /api/user/*
