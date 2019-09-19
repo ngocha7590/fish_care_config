@@ -10,7 +10,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
   datasource:
-    url: 'jdbc:mysql://${host.mysql}:3306/akawork_dashboard?useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true'
+    url: 'jdbc:mysql://${host.mysql}:3306/fishcare?useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true'
     username: root
     password: 123456789
   jpa:
@@ -23,14 +23,6 @@ eureka:
   instance:
     preferIpAddress: true
 keycloak:
-  auth-server-url: http://${host.keycloak}:8080/auth
-  enable-basic-auth: false
-  realm: master
-  public-client: false
-  resource: login-app
-  ssl-required: external
-  confidential-port: 0
-  use-resource-role-mappings: true
   cors: true
   corsMaxAge: 3600
   corsAllowedHeaders: '*, Origin, X-Requested-With, Content-Type, Accept, Authorization, refreshtoken'
