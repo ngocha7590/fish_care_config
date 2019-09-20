@@ -28,9 +28,10 @@ keycloak:
   realm: master
   public-client: true
   resource: local-app
-  ssl-required: external
+  ssl-required: none
   confidential-port: 0
   use-resource-role-mappings: true
+  verify-token-audience: true
   bearer-only: true
   cors: true
   corsMaxAge: 3600
