@@ -1,6 +1,6 @@
 host:
   eureka: localhost
-  keycloak: localhost
+  keycloak: 45.76.96.92
   mysql: localhost
 
 server:
@@ -23,16 +23,16 @@ eureka:
   instance:
     preferIpAddress: true
 keycloak:
-  auth-server-url: http://${host.keycloak}:8080/auth
+  auth-server-url: http://${host.keycloak}:9090/auth
   enable-basic-auth: false
   realm: master
   public-client: true
-  resource: local-app
-  ssl-required: external
+  resource: fishcare
+  ssl-required: none
   use-resource-role-mappings: true
   bearer-only: true
   credentials:
-    secret: f453881b-ae1d-40c6-99dc-7af082fbdcf5
+    secret: 418e76d1-591e-44e1-a502-9237b81105ae
   security-constraints:
     - authRoles:
         - user
