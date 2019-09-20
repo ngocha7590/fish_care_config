@@ -50,24 +50,7 @@ keycloak:
   security-constraints:
     - authRoles:
         - user
-        - admin
-        - contributor
       securityCollections:
         - patterns:
             - /api/dashboard/*
-            - /api/user/*
-    - authRoles:
-        - admin
-      securityCollections:
-        - patterns:
-            - /api/user/*
-            - /api/admin/*
-    - authRoles:
-        - contributor
-        - admin
-      securityCollections:
-        - patterns:
-            - /api/user/list
-            - /api/user/listByIds
-            - /api/user/search
-            - /api/user/check/*
+   
