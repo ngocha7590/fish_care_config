@@ -26,8 +26,8 @@ keycloak:
   auth-server-url: http://${host.keycloak}:8080/auth
   enable-basic-auth: false
   realm: master
-  public-client: false
-  resource: local-open
+  public-client: true
+  resource: local-app
   ssl-required: external
   confidential-port: 0
   use-resource-role-mappings: true
@@ -36,7 +36,7 @@ keycloak:
   corsAllowedHeaders: '*, Origin, X-Requested-With, Content-Type, Accept, Authorization, refreshtoken'
   corsAllowedMethods: 'POST, PUT, DELETE, GET'
   credentials:
-    secret: 8e7cef8d-d429-4534-bdfd-a7c66a79bcec
+    secret: f453881b-ae1d-40c6-99dc-7af082fbdcf5
   principal-attribute: preferred_username
   config:
     file: /opt/devops.v2/config/keycloak.json
