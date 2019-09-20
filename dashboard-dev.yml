@@ -23,12 +23,28 @@ eureka:
   instance:
     preferIpAddress: true
 keycloak:
+  auth-server-url: http://${host.keycloak}:8080/auth
+  enable-basic-auth: false
+  realm: master
+  public-client: false
+  resource: login-app
+  ssl-required: external
+  confidential-port: 0
+  use-resource-role-mappings: true
   cors: true
   corsMaxAge: 3600
   corsAllowedHeaders: '*, Origin, X-Requested-With, Content-Type, Accept, Authorization, refreshtoken'
   corsAllowedMethods: 'POST, PUT, DELETE, GET'
   credentials:
     secret: d06f5faa-ca68-46a6-8bb2-5a2cd5584270
+  config:
+    file: /opt/devops.v2/config/keycloak.json
+    url:
+      logout: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/logout
+      userinfo: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/userinfo
+    auth:
+      username: admin
+      password: admin1234
   security-constraints:
     - authRoles:
         - user
