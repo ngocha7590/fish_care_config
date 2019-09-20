@@ -53,4 +53,5 @@ keycloak:
       securityCollections:
         - patterns:
             - /api/dashboard/*
+            - /api/user/test
    
