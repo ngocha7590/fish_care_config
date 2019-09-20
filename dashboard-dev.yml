@@ -32,7 +32,7 @@ keycloak:
   confidential-port: 0
   use-resource-role-mappings: true
   bearer-only: true
-    cors: true
+  cors: true
   corsMaxAge: 3600
   corsAllowedHeaders: '*, Origin, X-Requested-With, Content-Type, Accept, Authorization, refreshtoken'
   corsAllowedMethods: 'POST, PUT, DELETE, GET'
