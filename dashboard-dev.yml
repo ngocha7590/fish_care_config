@@ -38,7 +38,7 @@ keycloak:
   credentials:
     secret: d06f5faa-ca68-46a6-8bb2-5a2cd5584270
   config:
-    file: /opt/devops.v2/config/keycloak.json
+    file: keycloak.json
     url:
       logout: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/logout
       userinfo: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/userinfo
