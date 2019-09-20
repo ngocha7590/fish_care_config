@@ -32,6 +32,21 @@ keycloak:
   confidential-port: 0
   use-resource-role-mappings: true
   bearer-only: true
+    cors: true
+  corsMaxAge: 3600
+  corsAllowedHeaders: '*, Origin, X-Requested-With, Content-Type, Accept, Authorization, refreshtoken'
+  corsAllowedMethods: 'POST, PUT, DELETE, GET'
+  credentials:
+    secret: f453881b-ae1d-40c6-99dc-7af082fbdcf5
+  principal-attribute: preferred_username
+  config:
+    file: /opt/devops.v2/config/keycloak.json
+    url:
+      logout: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/logout
+      userinfo: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/userinfo
+    auth:
+      username: admin
+      password: admin1234
   security-constraints:
     - authRoles:
         - user
