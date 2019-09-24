@@ -35,7 +35,7 @@ keycloak:
     secret: 418e76d1-591e-44e1-a502-9237b81105ae
   security-constraints:
     - authRoles:
-        - user,admin
+        - user, admin
       securityCollections:
         - patterns:
             - /api/dashboard/*
