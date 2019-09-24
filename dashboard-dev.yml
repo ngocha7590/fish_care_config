@@ -29,7 +29,7 @@ keycloak:
   public-client: true
   resource: fishcare
   ssl-required: none
-  use-resource-role-mappings: true
+  use-resource-role-mappings: false
   bearer-only: true
   credentials:
     secret: 418e76d1-591e-44e1-a502-9237b81105ae
