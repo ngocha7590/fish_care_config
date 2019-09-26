@@ -29,8 +29,6 @@ keycloak:
   ssl-required: none
   use-resource-role-mappings: true
   bearer-only: true
-  policy-enforcer-config:
-    lazy-load-paths: true
   config:
     file: /opt/devops.v2/config/keycloak.json
     url:
