@@ -24,13 +24,13 @@ eureka:
     preferIpAddress: true
 keycloak:
   auth-server-url: http://${host.keycloak}:9090/auth
-  enable-basic-auth: false
   realm: master
-  public-client: true
   resource: fishcare
   ssl-required: none
-  use-resource-role-mappings: false
+  use-resource-role-mappings: true
   bearer-only: true
+  policy-enforcer-config:
+    lazy-load-paths: true
   config:
     file: /opt/devops.v2/config/keycloak.json
     url:
@@ -45,4 +45,3 @@ keycloak:
         - patterns:
             - /api/dashboard/*
             - /api/user/profile
-   
