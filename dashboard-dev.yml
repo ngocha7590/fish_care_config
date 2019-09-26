@@ -49,7 +49,6 @@ keycloak:
     security-collections[0]:
       name: endpoints models
       patterns:
-        - /api/user/profile
         - /brands/models/{id}
       methods:
         - POST
