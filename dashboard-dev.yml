@@ -48,7 +48,7 @@ keycloak:
     security-collections[0]:
       name: endpoints models
       patterns:
-        - /api/user/*
+        - /api/admin/*
   security-constraints[1]:
     auth-roles:
       - admin
@@ -56,4 +56,5 @@ keycloak:
     security-collections[0]:
       name: endpoints models
       patterns:
-        - /api/user/login
+        - /api/user/logout
+        - /api/user/profile
