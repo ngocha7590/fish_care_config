@@ -45,7 +45,6 @@ keycloak:
   security-constraints[0]:
     auth-roles:
       - admin
-      - user
     security-collections[0]:
       name: endpoints models
       patterns:
