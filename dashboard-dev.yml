@@ -49,17 +49,7 @@ keycloak:
     security-collections[0]:
       name: endpoints models
       patterns:
-        - /brands/models/{id}
-      methods:
-        - POST
-        - PUT
-        - DELETE
-    security-collections[1]:
-      name: endpoints versions
-      patterns:
-        - /brands/models/versions
-        - /brands/models/versions/{id}
-        - /brands/models/versions/{id}/default
+        - /api/user/*
       methods:
         - POST
         - PUT
