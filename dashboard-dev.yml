@@ -31,6 +31,11 @@ keycloak:
   ssl-required: none
   use-resource-role-mappings: false
   bearer-only: true
+  config:
+    file: /opt/devops.v2/config/keycloak.json
+    url:
+      logout: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/logout
+      userinfo: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/userinfo
   credentials:
     secret: 418e76d1-591e-44e1-a502-9237b81105ae
   security-constraints:
