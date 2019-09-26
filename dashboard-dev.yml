@@ -49,3 +49,11 @@ keycloak:
       name: endpoints models
       patterns:
         - /api/user/*
+  security-constraints[1]:
+    auth-roles:
+      - admin
+      - user
+    security-collections[0]:
+      name: endpoints models
+      patterns:
+        - /api/user/login
