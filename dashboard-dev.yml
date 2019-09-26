@@ -49,7 +49,3 @@ keycloak:
       name: endpoints models
       patterns:
         - /api/user/*
-      methods:
-        - POST
-        - PUT
-        - DELETE
