@@ -51,7 +51,7 @@ keycloak:
             - /api/user/profile
     - authRoles:
         - admin
-        securityCollections:
-          - patterns:
-              - /api/dashboard/*
-              - /api/user/profile
+      securityCollections:
+        - patterns:
+            - /api/dashboard/*
+            - /api/user/profile
