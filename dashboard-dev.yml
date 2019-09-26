@@ -42,16 +42,26 @@ keycloak:
       userinfo: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/userinfo
   credentials:
     secret: 418e76d1-591e-44e1-a502-9237b81105ae
-  security-constraints:
-    - authRoles:
-        - user
-      securityCollections:
-        - patterns:
-            - /api/dashboard/*
-            - /api/user/profile
-    - authRoles:
-        - admin
-      securityCollections:
-        - patterns:
-            - /api/dashboard/*
-            - /api/user/profile
+  security-constraints[0]:
+    auth-roles:
+      - admin
+      - user
+    security-collections[0]:
+      name: endpoints models
+      patterns:
+        - /api/user/profile
+        - /brands/models/{id}
+      methods:
+        - POST
+        - PUT
+        - DELETE
+    security-collections[1]:
+      name: endpoints versions
+      patterns:
+        - /brands/models/versions
+        - /brands/models/versions/{id}
+        - /brands/models/versions/{id}/default
+      methods:
+        - POST
+        - PUT
+        - DELETE
