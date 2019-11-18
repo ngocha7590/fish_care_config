@@ -10,7 +10,7 @@ spring:
   datasource:
     url: 'jdbc:mysql://${host.mysql}:3406/fishcare-be?useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true'
     username: root
-    password: 123456789
+    password: XuqF8661
   jpa:
     hibernate:
       ddl-auto: update
