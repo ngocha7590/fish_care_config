@@ -1,7 +1,7 @@
 host:
-  eureka: localhost
-  keycloak: 45.76.96.92
-  mysql: localhost
+  eureka: lb-1.ddns.net
+  keycloak: lb-1.ddns.net
+  mysql: lb-1.ddns.net
 
 server:
   port: 9602
